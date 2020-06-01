@@ -17,6 +17,7 @@
 		97D8E0B824850AF1001B0C2C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D8E0B624850AF1001B0C2C /* Task+CoreDataClass.swift */; };
 		97D8E0B924850AF1001B0C2C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D8E0B724850AF1001B0C2C /* Task+CoreDataProperties.swift */; };
 		97D8E0BF24850DAA001B0C2C /* TaskTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D8E0BE24850DAA001B0C2C /* TaskTimer.storyboard */; };
+		97D8E0C12485103B001B0C2C /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D8E0C02485103B001B0C2C /* TaskList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		97D8E0B624850AF1001B0C2C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		97D8E0B724850AF1001B0C2C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		97D8E0BE24850DAA001B0C2C /* TaskTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTimer.storyboard; sourceTree = "<group>"; };
+		97D8E0C02485103B001B0C2C /* TaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,10 @@
 		97D8E0B524850A9F001B0C2C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				97D8E0A424850A71001B0C2C /* Main.storyboard */,
 				97D8E0AC24850A76001B0C2C /* LaunchScreen.storyboard */,
+				97D8E0A424850A71001B0C2C /* Main.storyboard */,
 				97D8E0BE24850DAA001B0C2C /* TaskTimer.storyboard */,
+				97D8E0C02485103B001B0C2C /* TaskList.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			files = (
 				97D8E0AE24850A76001B0C2C /* LaunchScreen.storyboard in Resources */,
 				97D8E0AB24850A76001B0C2C /* Assets.xcassets in Resources */,
+				97D8E0C12485103B001B0C2C /* TaskList.storyboard in Resources */,
 				97D8E0A624850A71001B0C2C /* Main.storyboard in Resources */,
 				97D8E0BF24850DAA001B0C2C /* TaskTimer.storyboard in Resources */,
 			);

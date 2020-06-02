@@ -1,59 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aIw-gC-reH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KUz-H8-iT9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
-        <scene sceneID="vbq-to-PBn">
+        <!--Root View Controller-->
+        <scene sceneID="ACu-2L-zog">
             <objects>
-                <tableViewController id="xFE-Gk-xvd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kvU-hk-Auq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <tableViewController id="Tqn-fI-FoG" customClass="TaskList" customModule="PomodoroFocusTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i8f-ZW-wtu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="P0f-zz-6T2">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="AIB-TU-g8Q" customClass="TaskCell" customModule="PomodoroFocusTimer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P0f-zz-6T2" id="xTH-p9-zqx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AIB-TU-g8Q" id="MU0-Hh-QpK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zgg-4m-j5r">
+                                            <rect key="frame" x="20" y="5" width="374" height="24.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKV-4X-IjK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="333" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFh-tQ-GNy">
+                                                    <rect key="frame" x="314" y="0.0" width="60" height="24.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="ylJ-Nb-cxw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zgg-4m-j5r" firstAttribute="leading" secondItem="MU0-Hh-QpK" secondAttribute="leading" constant="20" id="2Y9-1B-xR8"/>
+                                        <constraint firstAttribute="bottom" secondItem="zgg-4m-j5r" secondAttribute="bottom" constant="5" id="CBs-hO-2Xd"/>
+                                        <constraint firstAttribute="trailing" secondItem="zgg-4m-j5r" secondAttribute="trailing" constant="20" id="eWB-tw-0dQ"/>
+                                        <constraint firstItem="zgg-4m-j5r" firstAttribute="top" secondItem="MU0-Hh-QpK" secondAttribute="top" constant="5" id="ilz-QC-azd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taskIntervalCounter" destination="dFh-tQ-GNy" id="Akn-Er-DS9"/>
+                                    <outlet property="taskTitle" destination="qKV-4X-IjK" id="Jxs-nn-ULu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="xFE-Gk-xvd" id="6ws-zu-Mhv"/>
-                            <outlet property="delegate" destination="xFE-Gk-xvd" id="A4M-Ab-gXg"/>
+                            <outlet property="dataSource" destination="Tqn-fI-FoG" id="69k-Cy-JWj"/>
+                            <outlet property="delegate" destination="Tqn-fI-FoG" id="9qd-xK-5yP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Wmg-am-cok"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="5Go-ft-O2c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ERW-TG-syj">
+                            <connections>
+                                <action selector="addTask:" destination="Tqn-fI-FoG" id="GzP-bR-1hY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QC7-tB-bbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rag-Ak-v1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7018.8405797101459" y="386.38392857142856"/>
+            <point key="canvasLocation" x="6307" y="372"/>
         </scene>
-        <!--Task list-->
-        <scene sceneID="vpt-wh-A7I">
+        <!--Tasl list-->
+        <scene sceneID="BF0-4Z-njP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aIw-gC-reH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Task list" image="list.bullet" catalog="system" id="AmF-t0-Syl"/>
-                    <toolbarItems/>
+                <navigationController id="KUz-H8-iT9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tasl list" image="list.bullet" catalog="system" id="mhJ-KQ-btC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EvS-H8-M5u">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Cnd-vN-7yV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xFE-Gk-xvd" kind="relationship" relationship="rootViewController" id="zFC-cW-TLU"/>
+                        <segue destination="Tqn-fI-FoG" kind="relationship" relationship="rootViewController" id="egZ-cv-iCJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9bY-RM-oSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lha-do-NWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6108.6956521739139" y="386.38392857142856"/>
+            <point key="canvasLocation" x="5387" y="372"/>
         </scene>
     </scenes>
     <resources>

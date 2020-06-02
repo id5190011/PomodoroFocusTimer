@@ -7,17 +7,88 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Task Timer-->
         <scene sceneID="O6t-Rp-yJh">
             <objects>
-                <viewController id="W3j-xj-z25" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="W3j-xj-z25" customClass="TaskTimer" customModule="PomodoroFocusTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sia-AU-Jlh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ntg-rU-gOQ">
+                                <rect key="frame" x="30" y="305" width="354" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-T1-gfq">
+                                        <rect key="frame" x="49" y="0.0" width="256" height="112"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="100"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-Ie-mIm">
+                                        <rect key="frame" x="0.0" y="162" width="354" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rX-N1-ImS">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="startButtonAction:" destination="W3j-xj-z25" eventType="touchUpInside" id="f0g-og-ubZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71i-Ay-jbx">
+                                                <rect key="frame" x="121.5" y="0.0" width="111" height="36"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <state key="normal" title="Pause"/>
+                                                <connections>
+                                                    <action selector="pauseButtonAction:" destination="W3j-xj-z25" eventType="touchUpInside" id="xVF-Fa-ymW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-po-vHV">
+                                                <rect key="frame" x="242.5" y="0.0" width="111.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <state key="normal" title="Skip"/>
+                                                <connections>
+                                                    <action selector="skipButtonAction:" destination="W3j-xj-z25" eventType="touchUpInside" id="fhn-Nt-ld2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="b8Z-Ie-mIm" firstAttribute="leading" secondItem="ntg-rU-gOQ" secondAttribute="leading" id="Cen-ey-QzM"/>
+                                    <constraint firstAttribute="trailing" secondItem="b8Z-Ie-mIm" secondAttribute="trailing" id="OXj-sl-b4r"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Current task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPC-TJ-aRM">
+                                <rect key="frame" x="20" y="50" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="currentTaskEditing:" destination="W3j-xj-z25" eventType="editingDidBegin" id="j4U-g7-A12"/>
+                                    <action selector="currentTaskEndEditing:" destination="W3j-xj-z25" eventType="editingDidEnd" id="mKP-xS-6Xa"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BPC-TJ-aRM" firstAttribute="top" secondItem="ijm-Ip-Kny" secondAttribute="top" constant="50" id="5o9-0N-6GK"/>
+                            <constraint firstItem="ntg-rU-gOQ" firstAttribute="leading" secondItem="ijm-Ip-Kny" secondAttribute="leading" constant="30" id="BOq-eN-aPd"/>
+                            <constraint firstItem="ijm-Ip-Kny" firstAttribute="trailing" secondItem="BPC-TJ-aRM" secondAttribute="trailing" constant="20" id="Kn2-rs-ju2"/>
+                            <constraint firstItem="BPC-TJ-aRM" firstAttribute="leading" secondItem="ijm-Ip-Kny" secondAttribute="leading" constant="20" id="SaH-YO-Mfa"/>
+                            <constraint firstItem="ntg-rU-gOQ" firstAttribute="centerX" secondItem="Sia-AU-Jlh" secondAttribute="centerX" id="TNk-KF-z2q"/>
+                            <constraint firstItem="ntg-rU-gOQ" firstAttribute="centerY" secondItem="Sia-AU-Jlh" secondAttribute="centerY" id="Uew-Qr-Av2"/>
+                            <constraint firstItem="ijm-Ip-Kny" firstAttribute="trailing" secondItem="ntg-rU-gOQ" secondAttribute="trailing" constant="30" id="W7t-g2-Yaq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ijm-Ip-Kny"/>
                     </view>
                     <navigationItem key="navigationItem" id="0cc-f9-SVc"/>
+                    <connections>
+                        <outlet property="currentTaskTextField" destination="BPC-TJ-aRM" id="7gQ-DY-SQk"/>
+                        <outlet property="pauseButton" destination="71i-Ay-jbx" id="uek-ju-Fnz"/>
+                        <outlet property="skipButton" destination="aW8-po-vHV" id="v9m-us-L1J"/>
+                        <outlet property="startButton" destination="0rX-N1-ImS" id="CmO-BB-LXW"/>
+                        <outlet property="timelabel" destination="0y5-T1-gfq" id="5mG-5q-LTI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTy-7p-alz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,7 +101,7 @@
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="Tcx-cj-6ZG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l5G-Rt-a79">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="l5G-Rt-a79">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

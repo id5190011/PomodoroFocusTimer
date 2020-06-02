@@ -9,13 +9,19 @@
 import UIKit
 import CoreData
 
+var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        CustomColor.colorScheme = CustomColor.getSettingsDataColor(for: "colorScheme")
+        
+        detectFirstLaunch()
+        
+        setUpBarsUI()
+        
         return true
     }
 

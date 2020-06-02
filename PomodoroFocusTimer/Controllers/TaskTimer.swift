@@ -47,9 +47,7 @@ class TaskTimer: UIViewController {
         choiceInterval(currentTaskTextField)
         addToolBar(currentTaskTextField)
         
-        // Заглушка
-        reloadTimerValue()
-
+        // TO-DO: - обновлять значения таймера при изменении настроек
     }
     
     // MARK: - IB Actions

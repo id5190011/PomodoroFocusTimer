@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Settings-->
         <scene sceneID="Gsu-7A-Z14">
             <objects>
                 <tableViewController id="2bq-ct-uSZ" customClass="TaskSettings" customModule="PomodoroFocusTimer" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,7 +162,7 @@
                             <outlet property="delegate" destination="2bq-ct-uSZ" id="CRT-9M-a2V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="7qd-UF-m6x"/>
+                    <navigationItem key="navigationItem" title="Settings" id="7qd-UF-m6x"/>
                     <connections>
                         <outlet property="blueSchemeButton" destination="gON-xR-Zy1" id="eu9-FU-0rQ"/>
                         <outlet property="breakIntervalLabel" destination="3WI-8t-aR2" id="fzr-2Z-bSv"/>
@@ -184,8 +184,8 @@
                 <navigationController id="HBn-xx-Gcz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="c48-qP-yax"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="o7r-LE-dVO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="o7r-LE-dVO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

@@ -21,7 +21,7 @@ class TaskList: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Заглушка
+        // Не оптимальное решение
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(reloadTableview), userInfo: nil, repeats: true)
 
         setUpTaskListUI()

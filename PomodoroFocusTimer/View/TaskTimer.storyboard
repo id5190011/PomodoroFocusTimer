@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Task Timer-->
+        <!--Timer-->
         <scene sceneID="O6t-Rp-yJh">
             <objects>
                 <viewController interfaceStyle="light" id="W3j-xj-z25" customClass="TaskTimer" customModule="PomodoroFocusTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sia-AU-Jlh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ntg-rU-gOQ">
-                                <rect key="frame" x="30" y="305" width="354" height="198"/>
+                                <rect key="frame" x="30" y="279" width="354" height="198"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-T1-gfq">
                                         <rect key="frame" x="49" y="0.0" width="256" height="112"/>
@@ -62,7 +62,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Current task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPC-TJ-aRM">
                                 <rect key="frame" x="20" y="50" width="374" height="25.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <action selector="currentTaskEditing:" destination="W3j-xj-z25" eventType="editingDidBegin" id="j4U-g7-A12"/>
                                     <action selector="currentTaskEndEditing:" destination="W3j-xj-z25" eventType="editingDidEnd" id="mKP-xS-6Xa"/>
@@ -81,7 +81,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ijm-Ip-Kny"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0cc-f9-SVc"/>
+                    <navigationItem key="navigationItem" title="Timer" id="0cc-f9-SVc"/>
                     <connections>
                         <outlet property="currentTaskTextField" destination="BPC-TJ-aRM" id="7gQ-DY-SQk"/>
                         <outlet property="pauseButton" destination="71i-Ay-jbx" id="uek-ju-Fnz"/>
@@ -101,8 +101,8 @@
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="Tcx-cj-6ZG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="l5G-Rt-a79">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="l5G-Rt-a79">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -42,7 +42,7 @@ func setValueForFirstLaunch() {
     
     // Создаем первоначальные ключи и настройки
     UserDefaults.standard.set(true, forKey: "isWorkIntervalType")
-    // Реализовать на enum
+    // Не оптимальное решение - реализовать на enum
     //UserDefaults.standard.set("work", forKey: "currentIntervalType")
     UserDefaults.standard.set(8, forKey: "workInterval")
     UserDefaults.standard.set(3, forKey: "breakInterval")

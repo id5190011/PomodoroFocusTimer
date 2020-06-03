@@ -70,8 +70,6 @@ class TaskSettings: UITableViewController {
         breakIntervalEndEditing()
     }
     
-    
-    
     @IBAction func redSchemeButtonAction(_ sender: UIButton) {
         applyChangesAndShowAlert(color: "red")
     }

@@ -111,5 +111,4 @@ extension TaskTimer {
     @objc func reloadTimerValueFunc() {
         intervalManage()
     }
-
 }

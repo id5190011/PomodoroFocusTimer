@@ -11,7 +11,6 @@ import Foundation
 extension TaskList {
     func setUpTaskListUI() {
         tableView.rowHeight = 45
-        //tableView.backgroundColor =
 
         view.backgroundColor = CustomColor.darkGray
     }

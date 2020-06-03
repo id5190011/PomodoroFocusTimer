@@ -16,7 +16,5 @@ extension AppDelegate {
         
         UINavigationBar.appearance().barTintColor = .black
         UINavigationBar.appearance().tintColor = CustomColor.colorScheme
-        
-        
     }
 }

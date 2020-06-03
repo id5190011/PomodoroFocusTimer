@@ -35,7 +35,7 @@ extension TaskSettings: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        view.endEditing(true) // Скрываем клавиатуру вызванную для любого объекта
+        view.endEditing(true)
     }
     
     func workIntervalEndEditing() {
@@ -47,6 +47,7 @@ extension TaskSettings: UITextFieldDelegate {
             setNewValue(value: newValue, for: "workInterval")
         } else {
             workIntervalTextField.text = workIntervalValue
+            alert(title: "Error", message: "Wrong format! Enter number from 1 to 999")
         }
     }
     
@@ -59,6 +60,7 @@ extension TaskSettings: UITextFieldDelegate {
             setNewValue(value: newValue, for: "breakInterval")
         } else {
             breakIntervalTextField.text = breakIntervalValue
+            alert(title: "Error", message: "Wrong format! Enter number from 1 to 999")
         }
     }
     

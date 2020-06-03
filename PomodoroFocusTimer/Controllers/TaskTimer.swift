@@ -30,10 +30,6 @@ class TaskTimer: UIViewController {
     @IBOutlet var pauseButton: UIButton!
     @IBOutlet var skipButton: UIButton!
     
-    // Удалить
-    @IBOutlet var intervalTypeLabel: UILabel!
-    @IBOutlet var firstLaunchLabel: UILabel!
-    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -51,9 +47,7 @@ class TaskTimer: UIViewController {
     }
     
     // MARK: - IB Actions
-    
-    // for text field
-    
+        
     @IBAction func currentTaskEditing(_ sender: UITextField) {
         taskArray = createTaskArray()
     }
@@ -64,9 +58,7 @@ class TaskTimer: UIViewController {
             UserDefaults.standard.set(pickedElement, forKey: "lastTask")
         }
     }
-    
-    // for button
-    
+        
     @IBAction func startButtonAction(_ sender: UIButton) {
         start()
     }

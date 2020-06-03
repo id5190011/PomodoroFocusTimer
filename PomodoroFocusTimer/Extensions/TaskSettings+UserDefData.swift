@@ -21,6 +21,5 @@ extension TaskSettings {
         } else {
             return 0
         }
-        
     }
 }

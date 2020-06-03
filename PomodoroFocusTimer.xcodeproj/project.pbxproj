@@ -22,7 +22,6 @@
 		9782007A24855EB300C8B146 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782007924855EB300C8B146 /* TaskCell.swift */; };
 		9782007C24855F1F00C8B146 /* TaskList+Desigh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782007B24855F1F00C8B146 /* TaskList+Desigh.swift */; };
 		9782007E24855F4600C8B146 /* TaskCell+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782007D24855F4600C8B146 /* TaskCell+Design.swift */; };
-		978200802485714E00C8B146 /* TaskList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782007F2485714E00C8B146 /* TaskList+TableView.swift */; };
 		978200822485921700C8B146 /* TaskList+AddNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978200812485921700C8B146 /* TaskList+AddNewTask.swift */; };
 		979D885E2486E57700B8A3B8 /* TaskSettings+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D885D2486E57600B8A3B8 /* TaskSettings+TextField.swift */; };
 		979D88602486F92300B8A3B8 /* Description.strings in Resources */ = {isa = PBXBuildFile; fileRef = 979D885F2486F92300B8A3B8 /* Description.strings */; };
@@ -59,7 +58,6 @@
 		9782007924855EB300C8B146 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		9782007B24855F1F00C8B146 /* TaskList+Desigh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskList+Desigh.swift"; sourceTree = "<group>"; };
 		9782007D24855F4600C8B146 /* TaskCell+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskCell+Design.swift"; sourceTree = "<group>"; };
-		9782007F2485714E00C8B146 /* TaskList+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskList+TableView.swift"; sourceTree = "<group>"; };
 		978200812485921700C8B146 /* TaskList+AddNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskList+AddNewTask.swift"; sourceTree = "<group>"; };
 		979D885D2486E57600B8A3B8 /* TaskSettings+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskSettings+TextField.swift"; sourceTree = "<group>"; };
 		979D885F2486F92300B8A3B8 /* Description.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Description.strings; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				978200752485564F00C8B146 /* TaskTimer+TimerButtonActions.swift */,
 				97AB8DFD2486541B000BFD72 /* TaskTimer+Alert.swift */,
 				9782007B24855F1F00C8B146 /* TaskList+Desigh.swift */,
-				9782007F2485714E00C8B146 /* TaskList+TableView.swift */,
 				971C127624866D5B00816933 /* TaskList+Alert.swift */,
 				978200812485921700C8B146 /* TaskList+AddNewTask.swift */,
 				9782007D24855F4600C8B146 /* TaskCell+Design.swift */,
@@ -282,7 +279,6 @@
 				9782006E24853DBC00C8B146 /* Tasktimer+Picker.swift in Sources */,
 				97AB8DFE2486541B000BFD72 /* TaskTimer+Alert.swift in Sources */,
 				971C127724866D5B00816933 /* TaskList+Alert.swift in Sources */,
-				978200802485714E00C8B146 /* TaskList+TableView.swift in Sources */,
 				9782007824855E9E00C8B146 /* TaskList.swift in Sources */,
 				9782006324851B2200C8B146 /* TaskTimer+Design.swift in Sources */,
 				979D885E2486E57700B8A3B8 /* TaskSettings+TextField.swift in Sources */,

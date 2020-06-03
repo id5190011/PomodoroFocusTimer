@@ -13,7 +13,6 @@ struct CustomColor {
     // Установка цветовой схемы
     static var colorScheme = CustomColor.blue
     
-    
     static let red = UIColor(red: 237/255, green: 124/255, blue: 90/255, alpha: 1)
     static let yellow = UIColor(red: 255/255, green: 202/255, blue: 42/255, alpha: 1)
     static let green = UIColor(red: 113/255, green: 208/255, blue: 168/255, alpha: 1)
